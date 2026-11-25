@@ -6,7 +6,7 @@ st.title("🌎International Business Country Guide🌎")
 #TODO: Fill out your team number, section, and team members
 
 st.header("CS 1301")
-st.subheader("Team 28, Web Development - Section A")
+st.subheader("Team 28, Web Development Lab 03")
 st.subheader("Brandon Gonzalez Angel, Alejandro Ruiz")
 #TODO (optional): Add a group photo to the images folder and show it here, for example:
 
