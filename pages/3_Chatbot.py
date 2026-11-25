@@ -1,3 +1,4 @@
+import logging
 import os
 import streamlit as st
 from pydantic_ai import Agent
@@ -9,8 +10,8 @@ st.write("Ask for general tips for preparing for an international business conve
 try:
     os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 except Exception:
-    st.error("Add GOOGLE_API_KEY to .streamlit/secrets.toml to use the chatbot.")
-    st.stop()
+    logging.exception("Gemini request failed")
+    answer = "Sorry, something went wrong. Please try again."
 
 agent = Agent(
     "google:gemini-3.8-flash",
