@@ -30,8 +30,10 @@ st.subheader("Pages")
 st.write("""
     Country Explorer (Data Page): Choose two countries to compare their key facts, flags, population,
     and land area using real information from the countries.dev API.
-    Geography Chatbot: Chat about countries, geography, and international business. This chatbot remembers
+    
+    Chatbot: Chat about countries, geography, and international business. This chatbot remembers
     conversations, but does not look up live country API data.
-    Country AI Agent: In the works (Lab 4)
+    
+    Agent: In the works (Lab 4)
     """)
 
