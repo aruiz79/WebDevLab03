@@ -22,7 +22,7 @@ agent = Agent(
         "If asked for exact country information, say you cannot look it up here and suggest the Country Guide page. "
         "Remember details the user shares during this conversation."
     ),
-    model_settings={"request_timeout": 60},
+    model_settings={"request_timeout": 120},
 )
 
 if "chat_messages" not in st.session_state:
