@@ -1,5 +1,5 @@
-import logging
 import os
+import logging
 import streamlit as st
 from pydantic_ai import Agent
 
@@ -22,6 +22,7 @@ agent = Agent(
         "If asked for exact country information, say you cannot look it up here and suggest the Country Guide page. "
         "Remember details the user shares during this conversation."
     ),
+    model_settings={"request_timeout": 60},
 )
 
 if "chat_messages" not in st.session_state:
@@ -44,15 +45,17 @@ if prompt:
         st.write(prompt)
 
     try:
-        result = agent.run_sync(
-            prompt,
-            message_history=st.session_state.message_history,
-        )
+        with st.spinner("Waiting for Gemini..."):
+            result = agent.run_sync(
+                prompt,
+                message_history=st.session_state.message_history,
+            )
         answer = result.output
         st.session_state.message_history = result.all_messages()
     except Exception:
-        answer = "Sorry, something went wrong. Please try again."
-
-    st.session_state.chat_messages.append({"role": "assistant", "content": answer})
-    with st.chat_message("assistant"):
-        st.write(answer)
+        logging.exception("Gemini request failed")
+        answer = "Gemini could not respond. Please try again."
+        
+st.session_state.chat_messages.append({"role": "assistant", "content": answer})
+with st.chat_message("assistant"):
+    st.write(answer)
