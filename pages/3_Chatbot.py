@@ -56,6 +56,6 @@ if prompt:
         logging.exception("Gemini request failed")
         answer = "Gemini could not respond. Please try again."
         
-st.session_state.chat_messages.append({"role": "assistant", "content": answer})
-with st.chat_message("assistant"):
-    st.write(answer)
+    st.session_state.chat_messages.append({"role": "assistant", "content": answer})
+    with st.chat_message("assistant"):
+        st.write(answer)
