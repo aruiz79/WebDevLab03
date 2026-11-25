@@ -1,28 +1,27 @@
 import streamlit as st
-Title of App
 
 st.title("🌎International Business Country Guide🌎")
-Assignment Data
+#Assignment Data
 
-TODO: Fill out your team number, section, and team members
+#TODO: Fill out your team number, section, and team members
 
 st.header("CS 1301")
 st.subheader("Team 28, Web Development - Section A")
 st.subheader("Brandon Gonzalez Angel, Alex Rodriguez")
-TODO (optional): Add a group photo to the images folder and show it here, for example:
+#TODO (optional): Add a group photo to the images folder and show it here, for example:
 
 st.image("images/group_photo.jpg")
 
 
-Introduction
+#Introduction
 
-TODO: Write a quick description for all of your pages in this lab below, in the form:
+#TODO: Write a quick description for all of your pages in this lab below, in the form:
 
-1. Page Name: Description
+#1. Page Name: Description
 
-2. Page Name: Description
+#2. Page Name: Description
 
-3. Page Name: Description
+#3. Page Name: Description
 
 st.write(
     "Country Explorer is designed for people interested in international business. "
