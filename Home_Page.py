@@ -7,10 +7,9 @@ st.title("🌎International Business Country Guide🌎")
 
 st.header("CS 1301")
 st.subheader("Team 28, Web Development - Section A")
-st.subheader("Brandon Gonzalez Angel, Alex Rodriguez")
+st.subheader("Brandon Gonzalez Angel, Alejandro Ruiz")
 #TODO (optional): Add a group photo to the images folder and show it here, for example:
 
-st.image("images/group_photo.jpg")
 
 
 #Introduction
